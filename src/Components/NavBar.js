@@ -1,4 +1,7 @@
 import React from 'react';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import Container from 'react-bootstrap/Container';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../Styles/NavBar.css';
@@ -12,17 +15,15 @@ class NavBar extends React.Component {
   render() {
     return (
       <div>
-        <Navbar sticky="top" className="row NavBar">
-            <Navbar.Brand className="col-4 NavLogo" href="/">
-                <img src={logo} className="d-inline-block align-top" alt="VEEP Logo" />
-            </Navbar.Brand>
-            <Nav className="col-8 justify-content-end NavLinks">
-                <Nav.Link href="/">HOME</Nav.Link>
-                <Nav.Link href="/projects">PROJECTS</Nav.Link>
-                <Nav.Link href="/events">EVENTS</Nav.Link>
-                <Nav.Link href="/teams">TEAMS</Nav.Link>
-                <Nav.Link href="/contact">CONTACT US</Nav.Link>
+        <Navbar bg="primary" variant="dark">
+          <Container>
+            <Navbar.Brand >UofT Veep</Navbar.Brand>
+            <Nav className="me-auto">
+              <Nav.Link >Home</Nav.Link>
+              <Nav.Link >Projects</Nav.Link>
+              <Nav.Link >About Us</Nav.Link>
             </Nav>
+          </Container>   
         </Navbar>
       </div>
     )

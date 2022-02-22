@@ -1,36 +1,41 @@
-.HeaderEnter{
-    width: 100%;
+p.title{
+    font-weight: bold;
+    text-decoration-line: underline;
 }
-
-.HeaderEnter div{
-    display: flex;
-    justify-content: center;
+p.info{
+    font-weight: bold;
+    text-decoration-line: underline;
 }
-
-#MediumBannerLogo{
-    width: 30%;
+p.info_grid{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-gap: 1px;
+    grid-template-areas: "attributeName attributeValue";
 }
-
-.HeaderText{
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    color: rgba(0, 0, 0, 0.54);
-    text-align: center;
+p.attributeName {
+    font-size: 14px;
+    font-weight: bold;
+    grid-area: attributeName;
+    text-align: left;
 }
-
-@media (min-width: 1280px){
-    .HeaderText{
-        font-size: 5.9983rem;
-    }
+p.attributeValue {
+    font-size: 14px;
+    grid-area: attributeValue;
+    text-align: right;
 }
-
-@media (min-width: 960px){
-    .HeaderText{
-        font-size: 5.3556rem;
-    }
+div.card_list{
+    padding: 2px 16px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 5fr;
 }
-
-@media (min-width: 600px){
-    .HeaderText{
-        font-size: 4.7129rem;
-    }
+div.card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+div.card:hover{
+    box-shadow: 0 20px 40px 0 rgba(0,0,0,0.2);
+}
+Img.circle_crop{
+    border-radius: 50%;
 }
